@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to!
+  </h1>
+</div>  
+
+  <form>
+    <h3>Add a Link</h3>
+    <div>
+      <label for="cose">Cose Inutili:</label>
+      <input name="cose" #spamText>
+    </div>
+    <div>
+      <label for="nPost">Spam:</label>
+      <input name="nPost" #newNPost>
+    </div>
+    <button (click)="addArticle(spamText, newNPost)"> Submit spamm</button>
+  </form>
+  
+  
+  
+  <ul>
+    <li *ngFor="let item of articles; let i = index">
+    {{i}} {{item}}
+    </li>
+  </ul>
